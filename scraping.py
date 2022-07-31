@@ -3,6 +3,12 @@ from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
 import datetime as dt
+
+# selenium 4
+import selenium
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+import webdriver_manager
 from webdriver_manager.chrome import ChromeDriverManager
 
 def scrape_all():
@@ -52,7 +58,6 @@ def mars_news(browser):
         return None, None
 
     return news_title, news_p
-
 
 def featured_image(browser):
     # Visit URL
